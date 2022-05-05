@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Canvas - Aula 02</title>
+    <script type="text/javascript">
+      function desenho(){
+        let canvas =  document.getElementById('desenho1');
+        let ctx = canvas.getContext('2d');
+
+        ctx.moveTo(0,0); //
+        ctx.lineTo(250,250); // para onde vai
+        ctx.lineTo(400, 250) // x distanci, y altura, a partir do 0,0
+        ctx.lineTo(400, 100)
+        ctx.moveTo(250,250); // de onde inicia
+        ctx.lineTo(150, 350)
+        ctx.stroke()
+
+        // ctx.fillStyle = "#00f";
+        // ctx.rect(0,0,200,200)
+        // ctx.fill() // renderiza o preenchimento
+        
+      }
+    </script>
+</head>
+
+<body onLoad="desenho()">
+  <canvas id="desenho1" height="500" width="500" style="border:1px solid #000">
+    <h1>Seu browser não tem suport ao canvas</h1>
+  </canvas>
+
+</body>
+
+</html>

@@ -14,9 +14,20 @@
         let canvas = document.getElementById('desenho1');
         let ctx = canvas.getContext('2d')
         ctx.clearRect(0,0,500,500)
+        
         ctx.fillRect(px,0,50,50)
-        px++
-        anima = requestAnimationFrame(desenho)        
+        
+        
+        px = direcao ?  px = px+1 : px-1
+        console.log(px)
+        anima = requestAnimationFrame(desenho)
+        if(px == 450){
+          direcao = false
+        }
+        if(px == 0){
+          direcao = true
+        }
+        
       }
     </script>
 </head>
